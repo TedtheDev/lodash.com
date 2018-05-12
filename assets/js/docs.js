@@ -268,15 +268,17 @@
           },
           React.createElement(
             'h2',
-            null,
+            {
+              'className': 'menu-item',
+              'tabIndex': 0,
+              'onClick': expanderClick,
+              'onKeyPress': expanderClick
+            },
             React.createElement(
               'i',
               {
                 'className': className('fa', expanded ? 'fa-minus-square-o' : 'fa-plus-square-o'),
-                'tabIndex': 0,
                 'title': (expanded ? 'Collapse' : 'Expand') + ' Category',
-                'onClick': expanderClick,
-                'onKeyPress': expanderClick
               }
             ),
             collection.title
